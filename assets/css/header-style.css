@@ -1,0 +1,174 @@
+/* header-style.css - Header compatible con Bootstrap */
+.th-header-nav {
+    background-color: #023577 !important;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030; /* Bootstrap usa 1030 para navbar, usamos el mismo */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    font-family: Arial, sans-serif;
+    height: 60px;
+}
+
+.th-nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.th-nav-brand {
+    display: flex;
+    align-items: center;
+    color: white !important; /* Important para sobreescribir Bootstrap */
+    text-decoration: none !important;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 0 !important;
+}
+
+.th-nav-brand:hover {
+    color: #023E8A !important;
+    text-decoration: none !important;
+}
+
+.th-nav-brand img {
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+/* Menú para desktop - Compatible con Bootstrap */
+.th-nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: nowrap;
+}
+
+.th-nav-menu li {
+    position: relative;
+}
+
+.th-nav-menu a {
+    color: white !important;
+    text-decoration: none !important;
+    padding: 20px 15px !important;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+
+.th-nav-menu a:hover {
+    background-color: #34495e;
+    text-decoration: none !important;
+}
+
+.th-nav-menu img {
+    margin-right: 10px;
+    width: 28px;
+    height: 28px;
+}
+
+/* Botón hamburguesa */
+.th-hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    background: none;
+    border: none;
+}
+
+.th-hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Responsive para móviles */
+@media (max-width: 992px) {
+    .th-hamburger {
+        display: flex;
+    }
+    
+    .th-nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 60px;
+        flex-direction: column;
+        background-color: #023E8A ;
+        width: 100%;
+        height: calc(100vh - 60px);
+        transition: 0.3s;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        overflow-y: auto;
+    }
+    
+    .th-nav-menu.th-active {
+        left: 0;
+    }
+    
+    .th-nav-menu li {
+        width: 100%;
+    }
+    
+    .th-nav-menu a {
+        padding: 15px 20px !important;
+        border-bottom: 1px solid #2c3e50;
+        justify-content: flex-start;
+    }
+    
+    .th-nav-container {
+        padding: 0 15px;
+    }
+}
+
+/* Espacio para el contenido - IMPORTANTE para Bootstrap */
+body.th-header-active {
+    padding-top: 60px !important;
+}
+
+/* Reset específico para evitar conflictos con Bootstrap */
+.th-header-nav,
+.th-header-nav * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    line-height: normal;
+}
+
+.th-header-nav ul,
+.th-header-nav li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.th-header-nav a {
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    float: none !important;
+}
+
+/* Asegurar que no herede estilos de tablas de Bootstrap */
+.th-header-nav table,
+.th-header-nav tr,
+.th-header-nav td {
+    display: block !important;
+    width: auto !important;
+    border: none !important;
+    background: none !important;
+}

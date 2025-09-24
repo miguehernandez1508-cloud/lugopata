@@ -1,0 +1,213 @@
+
+    .form-container {
+        width: 1000px;
+        margin: 50px auto; /* Centrado horizontal */
+        padding: 30px;
+        background-color: rgba(255, 255, 255, 0.9);  /* ✅ correcto */
+
+        border-radius: 20px; /* Más suavizado */
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Opcional: da profundidad */
+        border: 3px solid black;
+    }
+    .form-container input,
+    .form-container select,
+    .form-container button {
+        width: 100%;
+        margin-bottom: 10px;
+        border-radius: 15px; /* Más redondeado */
+        border: 1px solid #94a096ff; /* Opcional: bordes más suaves */
+        padding: 8px;
+    }
+
+    .form-container button {
+    width: auto;           /* Que no ocupe todo el ancho */
+    padding: 8px 50px;     /* Más pequeño y proporcional */
+    border-radius: 15px;   /* Mantener bordes redondeados */
+    background-color: #28a745; /* Verde */
+    color: white;          /* Texto blanco */
+    border: none;          /* Quitar borde predeterminado */
+    cursor: pointer;       /* Cambia cursor al pasar el mouse */
+}
+
+ /* -------------Container del login -------------*/
+    .form-container2 {
+        width: 600px;
+        margin: 50px auto; /* Centrado horizontal */
+        padding: 30px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 30px; /* Más suavizado */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Opcional: da profundidad */
+    }
+    .form-container2 input,
+    .form-container2 select,
+    .form-container2 button {
+        width: 100%;
+        margin-bottom: 10px;
+        border-radius: 15px; /* Más redondeado */
+        border: 1px solid #94a096ff; /* Opcional: bordes más suaves */
+        padding: 8px;
+    }
+
+    .form-container2 button {
+    width: auto;           /* Que no ocupe todo el ancho */
+    padding: 8px 50px;     /* Más pequeño y proporcional */
+    border-radius: 15px;   /* Mantener bordes redondeados */
+    background-color: #28a745; /* Verde */
+    color: white;          /* Texto blanco */
+    border: none;          /* Quitar borde predeterminado */
+    cursor: pointer;       /* Cambia cursor al pasar el mouse */
+}
+
+         /* Cabecera azul */
+        .header {
+    background-color: #bd612cff; /* Azul suave */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px; /* más espacio interno */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin: 30px auto; /* margen superior e inferior y centrado horizontal */
+    border-radius: 20px; /* bordes redondeados */
+    max-width: 1400px; /* para que no ocupe todo el ancho */
+    margin-top: -50px; /* un poco desde arriba */
+}
+
+
+        /* Logo y botones a la izquierda */
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 15px; /* espacio entre logo y botón */
+        }
+
+        .logo img {
+            height: 60px;
+        }
+
+        /* Botón desplegable */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropbtn {
+            background-color: rgba(255,255,255,0.3);
+            color: #ffffffee;
+            padding: 14px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .dropbtn img {
+            margin-right: 8px;
+            height: 28px;
+        }
+
+        /* Contenido desplegable */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(233, 231, 231, 0.95);
+            min-width: 160px;
+            box-shadow: 0px 4px 8px rgba(156, 155, 155, 1);
+            border-radius: 6px;
+            z-index: 1;
+        }   
+
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-weight: bold;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* Mostrar contenido al hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+        color: #333;               /* Color normal */
+        padding: 12px 16px;
+        text-decoration: none;     /* Sin subrayado */
+        display: block;
+        font-weight: bold;
+    }
+
+/* Quitar efecto al pasar el mouse o al hacer clic */
+    .dropdown-content a:hover,
+    .dropdown-content a:focus,
+    .dropdown-content a:active {
+    color: #333;               /* Mantener color */
+    text-decoration: none;     /* Sin subrayado */
+    background-color: #d8d2d2ff; /* Opcional: resalta con fondo suave */
+    outline: none;             /* Quita borde azul en foco */
+    }   
+
+        /* Información del usuario a la derecha */
+        .user-info {
+            font-weight: bold;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .user-info {
+                margin-top: 10px;
+            }
+        }
+.tabla-auditoria {
+  background: #fff;       /* fondo blanco */
+  border-radius: 12px;    /* bordes redondeados */
+  padding: 1rem;          /* aire alrededor */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05); /* sombra sutil */
+}
+.table {
+  margin: 0; /* quita espacio extra */
+  border-radius: 8px;
+  overflow: hidden; /* respeta el borde redondeado */
+}
+
+.firma {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.firma div {
+    text-align: center;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar horizontalmente */
+}
+
+.firma div img {
+    max-width: 300px;
+    max-height: 100px;
+    display: block;
+    border: none;
+}
+
+.firma div .linea-firma {
+    border-bottom: 1px solid #000;
+    width: 200px;
+    margin-top: -5px; /* Sin margen arriba */
+    height: 0;
+}
+
+
